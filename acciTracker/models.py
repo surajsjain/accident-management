@@ -4,8 +4,10 @@ from datetime import datetime
 # Create your models here.
 class Accident(models.Model):
     datetime = models.DateTimeField(default=datetime.now())
+    # acci_id = models.CharField(default="")
     lat = models.FloatField();
     lng = models.FloatField();
+    handled = models.BooleanField(default=False)
 
 class Crowd(models.Model):
     datetime = models.DateTimeField(default=datetime.now())

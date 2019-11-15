@@ -8,4 +8,5 @@ urlpatterns = [
     path('', include('pages.urls')),
     path('admin/', admin.site.urls, name='admin'),
     path('dashboard/', include('dashboard.urls')),
+    path('accitracker/', include('acciTracker.urls')),
 ]
