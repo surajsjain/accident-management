@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+
+{% block mainContent %}
+
+<div class="row mt-5">
+    <div class="col-xl-6 mb-5 mb-xl-0">
+
+        <div id="map" class="card" style="height:435px; width:-webkit-fill-available;"></div>
+
+    </div>
+    <div class="col-xl-6 mb-5 mb-xl-0">
+
+        <div class="card bg-gradient-default shadow" style="display: inline-block; width: -webkit-fill-available;">
+
+            <div class="card-header bg-transparent">
+                <div class="col">
+                    <h6 class="text-uppercase text-light ls-1 mb-1">Live</h6>
+                    <h2 class="text-white mb-0">Current Accidents</h2>
+                </div>
+            </div>
+
+            <div class="card-body">
+
+            </div>
+
+
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}
+
+
+{% block extraJS %}
+
+<!-- <script>
+    var map;
+    // var marker;
+
+    function initMap() {
+
+        map = new google.maps.Map(document.getElementById('map'), {
+            center: {
+                lat: 12.9716,
+                lng: 77.5946,
+            },
+            zoom: 10
+        });
+
+        var markers = [];
+
+        function addMarker(coords) {
+            var marker = new google.maps.Marker({
+                position: coords,
+                map: map,
+                // title: 'Hello World!'
+            });
+
+            var markOb = {
+                position: coords,
+                marker: marker,
+            }
+
+            markers[markers.length] = markOb;
+        }
+
+        function removeMarker(coords)
+        {
+            var markCoord, markInFocus;
+            for(i=0; i<markers.length; i++)
+            {
+                markCoord = markers[i]['position'];
+                markInFocus = markers[i]['marker'];
+
+                if(markCoord == coords){
+                    markInFocus.setMap(null);
+                    break;
+                }
+            }
+        }
+
+        coord = {
+            lat: 12.9308,
+            lng: 77.5802,
+        };
+
+        addMarker(coord);
+        console.log(markers);
+
+        removeMarker(coord);
+
+
+    }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC31Q7lRlTmKColkbpbFRdiYGJs7yQ2QUA&callback=initMap" async defer></script> -->
+
+{% endblock %}
